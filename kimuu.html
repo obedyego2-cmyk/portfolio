@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obed Kimurgor | Full Stack Developer</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Arial, Helvetica, sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#000000;
+      color:white;
+      line-height:1.6;
+    }
+
+    header{
+      background:#000000;
+      padding:20px 50px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav h1{
+      color:#00aaff;
+      font-size:30px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:20px;
+    }
+
+    a{
+      color:white;
+      text-decoration:none;
+      transition:0.1s;
+    }
+
+    nav a:hover{
+      color:#00ffff;
+    }
+
+       /* HERO SECTION */
+
+.hero{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(
+        135deg,
+        #000000 0%,
+        #000000 50%,
+        #000000 100%
+    );
+    padding:0 8%;
+}
+
+.hero-container{
+    width:100%;
+    max-width:1400px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:80px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h2{
+    font-size:4rem;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero-text span{
+    color:#00ffff;
+}
+
+.hero-text p{
+    font-size: 17px;
+    color:#cbd5e1;
+    max-width:650px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.hero-btn{
+    padding:14px 28px;
+    background:#00aaff;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.1s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-4px);
+    background:#00ffff;
+}
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:500px;
+    height:500px;
+    object-fit:cover;
+    border-radius:25px;
+    border:5px solid #00aaff;
+    box-shadow:
+      0 0 25px #00ffff,
+}
+
+@media(max-width:768px){
+
+.hero-container{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.hero-text h2{
+    font-size:2.5rem;
+}
+
+.hero-text p{
+    margin:auto auto 30px;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.hero-image img{
+    width:300px;
+    height:350px;
+}
+}
+
+    /* GENERAL SECTION */
+
+    section{
+      padding:80px 50px;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:50px;
+      font-size:35px;
+      color:#00ffff;
+    }
+
+    /* ABOUT */
+
+    .about p{
+      max-width:1500px;
+      margin:auto;
+      text-align:center;
+      color:#ffffff;
+      font-size:17px;
+    }
+
+    /* SKILLS */
+
+    .skills-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+    }
+
+    .skill{
+      background:#32435f;
+      padding:20px;
+      border-radius:12px;
+      text-align:center;
+      transition:0.1s;
+    }
+
+    .skill:hover{
+      transform:translateY(-5px);
+      background:#00ffff;
+    }
+
+    /* PROJECTS */
+
+    .projects-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .project{
+      background:#1e293b;
+      padding:25px;
+      border-radius:12px;
+      transition:0.1s;
+    }
+
+    .project:hover{
+      transform:translateY(-5px);
+      background: #00ffff;
+    }
+
+    .project h3{
+      color:#f4f4f4;
+      margin-bottom:15px;
+    }
+
+    .project p{
+      color:#cbd5e1;
+    }
+
+   /* CONTACT */
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin:15px 0;
+      color:#ffffff;
+      font-size:18px;
+    }
+
+   .social-links{
+    display:flex;
+    gap: 20px;
+    justify-content: center;
+   }
+
+   .social-links a {
+    font-size: 2rem;
+    color: white;
+    transition: 0.1s;
+   }
+
+   .social-links a:hover{
+    transform: scale(1.2);
+   }
+
+    /* FOOTER */
+
+    footer{
+      background:#000000;
+      text-align:center;
+      padding:20px;
+      color:#ffffff;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      .hero{
+        padding:30px 20px;
+      }
+
+      .hero-container{
+        flex-direction:column-reverse;
+        text-align:center;
+      }
+
+      .hero h2{
+        font-size:40px;
+      }
+
+      .hero-image img{
+        width: 280px;
+        height:280px;
+      }
+
+      section{
+        padding:60px 20px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header>
+
+    <nav>
+
+      <h1>Kimurgor_yego</h1>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      
+    </nav>
+
+  </header>
+
+  <!-- HERO SECTION -->
+   
+  <section class="hero" id="home">
+
+<div class="hero-container">
+
+<div class="hero-text">
+
+<h2>
+Hello, I'm <span>Obed Kimurgor</span>
+</h2>
+
+<p>
+Computer Science undergraduate at Chuka University and aspiring Full Stack Developer.
+I build responsive websites and web applications using HTML, CSS, JavaScript, Git and GitHub.
+Currently seeking internship opportunities to gain practical industry experience and contribute to real-world projects.
+</p>
+
+<div class="hero-buttons">
+
+<a href="https://github.com/obedyego2-cmyk" target="_blank">
+<button class="hero-btn">
+<i class="fab fa-github"></i> GitHub
+</button>
+</a>
+
+<a href="#projects">
+<button class="hero-btn">
+View Projects
+</button>
+</a>
+
+<a href="/home/obedk/Downloads/Document 5.pdf" download>
+<button class="hero-btn">
+<i class="fa-solid fa-download"></i> Download CV
+</button>
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<img src="/home/obedk/Desktop/file_0000000075e871f4852e7eeb84602128.png" alt="Obed Kimurgor">
+
+</div>
+
+</div>
+
+</section>
+  
+  <!-- ABOUT SECTION -->
+
+  <section class="about" id="about">
+
+    <h2 class="title">About Me</h2>
+
+    <p>
+    I am a passionate computer science student at Chuka university with growing skills in software development, programming, and problem-solving. I have experience working with programming languages such as C++, JavaScript, HTML, and CSS, and I am currently expanding my knowledge in full stack web development.
+
+I understand core concepts in Object-Oriented Programming (OOP) including encapsulation, abstraction, polymorphism, overloading, and overriding. I also have knowledge in systems analysis and design, database concepts, and information technology fundamentals.
+I am continuously learning modern technologies and frameworks such as React and backend development tools to become a professional full stack developer. My goal is to build innovative software solutions and improve my technical expertise in the field of computer science. 
+I am an upcoming Full Stack Developer currently focused on
+      mastering frontend and backend web technologies.
+      I enjoy building modern websites, solving problems and
+      continuously improving my development skills through
+      real-world projects.
+    </p>
+
+  </section>
+
+  <!-- EDUCATION SECTION-->
+   <section id="education">
+
+    <h2 class="title">Education</h2>
+
+    <div class="project">
+
+      <h3>Chuka University</h3>
+
+      <p>
+        Bachelor of Science in Computer Science
+        <br>
+        Current Undergraduate Student
+      </p>
+
+      </div>
+
+      </section>
+
+    <section id="career objective">
+
+   <div class="project">
+
+    <h3>Career objective</h3>
+
+    <p>
+      To secure a software delopment internship where I can apply my technical skills, gain practical experience, and contribute to innovative projects while growing as a Full Stack Developer.
+    </p>
+
+   </div>
+
+   </div>
+
+   </section>
+
+
+  <!-- SKILLS SECTION -->
+
+  <section id="skills">
+
+    <h2 class="title">Skills</h2>
+
+    <div class="skills-container">
+
+      <div class="skill">
+        <h3>HTML5</h3>
+      </div>
+
+      <div class="skill">
+        <h3>CSS3</h3>
+      </div>
+
+      <div class="skill">
+        <h3>JavaScript</h3>
+      </div>
+
+      <div class="skill">
+        <h3>Git & GitHub</h3>
+      </div>
+
+      <div class="skill">
+        <h3>Responsive Design</h3>
+      </div>
+
+      <div class="skill">
+        <h3>Frontend Development</h3>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS SECTION -->
+
+  <section id="projects">
+
+    <h2 class="title">Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="project">
+
+        <h3>Portfolio Website</h3>
+
+        <p>
+          Personal portfolio website showcasing my
+          skills, projects and contact information.
+        </p>
+        <br>
+
+        </p>
+
+        <a href="https://github.com/Kimurgor_yego/portfolio" target="_blank">
+          <button>
+          View Code
+          </button>
+        </a>
+
+        <br><br>
+
+        <a href="kimuu.html" target="_blank">
+        <button>
+           Live Demo
+           </button>
+        </a>
+
+      </div>
+
+      <div class="project">
+
+        <h3>Restaurant Website</h3>
+
+        <p>
+          Responsive restaurant landing page built
+          using HTML and CSS.
+        </p>
+
+      </div>
+
+      <div class="project">
+
+        <h3>Registration Form</h3>
+
+        <p>
+          Professional user registration form with
+          multiple input fields and validation structure.
+        </p>
+
+      </div>
+
+      <div class="project">
+
+        <h3>Weather App</h3>
+
+        <p>
+          Upcoming JavaScript project that fetches
+          real-time weather data using APIs.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+<!-- CONTACT SECTION -->
+ 
+<section class="contact" id="contact">
+
+  <h2 class="title">Contact Me</h2>
+
+  <p>Contact: 0758019128</p>
+
+  <p>Email: obedyego2@gmail.com</p>
+
+  <p>Location: Nairobi, Kenya</p>
+
+  <p>Available For Freelance & Collaboration</p>
+
+  <div class="social-links">
+
+    <a href="mailto:obedyego2@gmail.com" target="_blank" title="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+
+    <a href="https://github.com/obedyego2-cmyk" target="_blank" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://instagram.com/kim_obed.yego" target="_blank" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://wa.me/254758019128" target="_blank" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="https://facebook.com/Obed Yego" target="_blank" title="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://twitter.com/Obed yego" target="_blank" title="X (Twitter)">
+      <i class="fab fa-x-twitter"></i>
+    </a>
+
+  </div>
+
+</section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>© 2026 Obed Kimurgor. All Rights Reserved.</p>
+
+    <p>Computer Science Student |
+      Full Stack Developer |
+      Chuka University
+    </p>
+
+
+  </footer>
+
+</body>
+</html>
